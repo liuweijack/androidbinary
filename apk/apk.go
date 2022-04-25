@@ -11,6 +11,7 @@ import (
 
 	"github.com/liuweijack/androidbinary"
 
+	_ "image/gif"  // handle png format
 	_ "image/jpeg" // handle jpeg format
 	_ "image/png"  // handle png format
 )
