@@ -286,6 +286,8 @@ func (f *TableFile) GetResource(id ResID, config *ResTableConfig) (interface{}, 
 		return f.GetString(ResStringPoolRef(v.Data)), nil
 	case TypeIntDec:
 		return v.Data, nil
+	case TypeReference:
+		return f.GetResource((ResID)(v.Data), config)
 	case TypeIntHex:
 		return v.Data, nil
 	case TypeIntBoolean:

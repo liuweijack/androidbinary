@@ -79,13 +79,10 @@ func (k *Apk) Icon(resConfig *androidbinary.ResTableConfig) (image.Image, error)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println(iconPath)
 	if androidbinary.IsResID(iconPath) {
 		return nil, newError("unable to convert icon-id to icon path")
 	}
-	fmt.Println(iconPath)
 	imgData, err := k.readZipFile(iconPath)
-	fmt.Println(iconPath)
 	if err != nil {
 		return nil, err
 	}
