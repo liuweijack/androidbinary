@@ -14,7 +14,8 @@ import (
 	_ "image/gif"  // handle png format
 	_ "image/jpeg" // handle jpeg format
 	_ "image/png"  // handle png format
-	_ "image/webp"
+
+	_ "golang.org/x/image/webp"
 )
 
 // Apk is an application package file for android.
