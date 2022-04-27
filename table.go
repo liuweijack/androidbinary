@@ -919,12 +919,12 @@ func (c *ResTableConfig) IsLocaleBetterThan(o *ResTableConfig, r *ResTableConfig
 		// The languages of the two resources are not the same.
 
 		// the US English resource have traditionally lived for most apps.
-		if r.Language == [2]uint8{'e', 'n'} {
-			if r.Country == [2]uint8{'U', 'S'} {
+		if r.Language == [2]uint8{'z', 'h'} {
+			if r.Country == [2]uint8{'C', 'H'} {
 				if c.Language != [2]uint8{} {
-					return c.Country == [2]uint8{} || c.Country == [2]uint8{'U', 'S'}
+					return c.Country == [2]uint8{} || c.Country == [2]uint8{'C', 'H'}
 				}
-				return !(c.Country == [2]uint8{} || c.Country == [2]uint8{'U', 'S'})
+				return !(c.Country == [2]uint8{} || c.Country == [2]uint8{'C', 'H'})
 			}
 		}
 		return c.Language != [2]uint8{}
